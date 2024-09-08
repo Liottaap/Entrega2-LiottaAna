@@ -40,17 +40,15 @@ main h1 {
 
 /* -----------NAV logo---------- */
 .header-logo-container {
-    display: flex;
-    justify-content: space-between;
-/*     background-color: #4e7748; */
-    background: -webkit-linear-gradient(90deg,  #4e7748 10%, #c7965c 90%);
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: #4e7748;
 }
 .header-logo {
-    width: 50%;
-    margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background: -webkit-linear-gradient(90deg,  #4e7748 10%, #c7965c 90%);
 }
 
 header div a img {
@@ -61,6 +59,43 @@ header div p {
     font-size: 5rem;
     color: #412f26;
 }
+
+/* -----------NAV botones---------- */
+
+.nav-buttons {
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--primary-color);
+    align-items: center;
+    padding-right: 20px;
+}
+
+.cart-button, .nav-buttons .account-button{
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 20px; 
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.account-button {
+    background-image: url("../img/icono/account-manager_red.png");
+
+}
+.cart-button {
+    background-image: url("../img/icono/shopping-cart-white_red.png");
+}
+
+.account-button:hover, .cart-button:hover {
+    transform: scale(1.2);
+}
+
 /* modificación nav - bootstrap */
 .color-nav {
     background-color: var(--primary-color);
@@ -89,43 +124,6 @@ header div p {
 }
 .modify-letra {
     font-size: 1.6rem;
-}
-
-/* -----------NAV botones---------- */
-
-.nav-buttons {
-    background: transparent;
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--primary-color);
-    align-items: center;
-    width: 60%;
-    padding-right: 50px;
-}
-
-.cart-button, .nav-buttons .account-button{
-    width: 60px;
-    height: 60px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-left: 20px; 
-    background-color: transparent;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-}
-
-.account-button {
-    background-image: url("../img/icono/account-manager_red.png");
-
-}
-.cart-button {
-    background-image: url("../img/icono/shopping-cart-white_red.png");
-}
-
-.account-button:hover, .cart-button:hover {
-    transform: scale(1.2);
 }
 
 
