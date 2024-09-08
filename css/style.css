@@ -47,13 +47,19 @@ main h1 {
 }
 .header-logo {
     width: 50%;
-    padding-left: 3%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 header div a img {
-    width: 250px;
-    height: 120px;
-    align-self: center;
+    width: 150px;
+    height: 75%;
+}
+header div p {
+    font-size: 5rem;
+    color: #412f26;
 }
 /* modificación nav - bootstrap */
 .color-nav {
@@ -233,15 +239,15 @@ header div a img {
     font-size: 3rem;
 }
 
-/* cards container */
+/* cards container - carrusel */
 .section-2-main-cards-container {
     display: flex;
     gap: 10px;
-    margin: 20px 0;
+    margin: 50px auto;
+    width: 80%;
     overflow-x: auto; 
     scroll-snap-type: x mandatory; 
 }
-
 .card-main {
     flex: 0 0 auto; 
     width: 250px;
@@ -262,37 +268,34 @@ header div a img {
     justify-content: space-evenly;
     flex-direction: column;
 }
-
-.section-2-main-cards-container::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-.section-2-main-cards-container::-webkit-scrollbar-thumb {
-    background-color: var(--primary-color);
-    border-radius: 10px;
-}
-.card-main-text  p,
 .card-main-text  h3 {
-    color: white;
+    font-size: 2rem;
 }
-.card-main-text  p, h3 {
+.card-main-text p {
     font-size: 1.8rem;
 }
-.card-main:nth-child(1), 
-.card-main:nth-child(3), 
-.card-main:nth-child(5){
+.card-main-text  p, h3 {
+    color: white;
+}
+.card-main:nth-child(2n){
     background-color: var(--secondary-color);
     border: 3px solid var(--secondary-color);
 }
-.card-main:nth-child(2),
-.card-main:nth-child(4),
-.card-main:nth-child(6) {
+.card-main:nth-child(2n+1) {
     background-color: var(--primary-color);
     border: 3px solid var(--primary-color);
 }
 .card-main:hover {
     cursor: pointer;
+}
+/* customización de la barrita del carrusel */
+.section-2-main-cards-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.section-2-main-cards-container::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
 }
 
 
@@ -309,51 +312,62 @@ footer {
     background-color: var(--dark-letter);
 
 }
+
 footer p, footer h3, footer a {
     color: var(--light-letter-color);
-    text-align: left;
+
 }
 footer p,
 footer a{
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: var(--light-letter-color)
 }
 
 footer h3 {
-    font-size: 3rem;
-    padding-bottom: 10px;
+    font-size: 2.2rem;
 }
-footer div {
-    width: 33%;
-}
-
-footer .footer-container {
+.footer-container-isologo{
     display: flex;
-    width: 100%;
-    height: auto;
-    padding: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-footer .footer-container-redes ul {
-    list-style: none;
+.footer-isologo{
     display: flex;
-    align-items: space-between;
+    justify-content: center;
+    align-items: center;
 }
-footer .footer-container-redes ul li {
-    margin-right: 20px;
+.footer-isologo a {
+    font-size: 2.5rem;
+}
+.footer-isologo img{
+    width: 30%;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    justify-content: center;
+    
+}
+.footer-container-contacto,
+.footer-container-redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer .footer-container-redes ul{
+    display: flex;
+}
+footer .footer-container-redes ul li{
+    margin-right: 5px;
 }
 footer .footer-container-redes ul li img {
     width: 50px;
     height: 50px;
 }
-footer .footer-container img {
-    width: 30%;
-}
-footer .footer-container-redes, .footer-container-contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 
 /* --------------------------------- ESTILOS DE PRODUCTOS -----------------------------------*/
@@ -405,7 +419,7 @@ main .products-list {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2%;
+
 }
 main .product-main {
     width: 220px;
