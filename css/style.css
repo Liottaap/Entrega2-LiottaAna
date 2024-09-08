@@ -37,6 +37,26 @@ main h1 {
 /* ------------ESTILOS DEL HEADER-------------*/
 /* ------------ESTILOS DEL HEADER-------------*/
 
+/* Fixed menu para mobile. */
+.fixed-menu {
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: 8vh;
+    background-color: #83d9b1;
+
+    display: none;
+
+}
+.fixed-menu div img {
+    width: 60px;
+    height: 60px;
+}
+
+
 
 /* -----------NAV logo---------- */
 .header-logo-container {
@@ -71,27 +91,23 @@ header div p {
     padding-right: 20px;
 }
 
-.cart-button, .nav-buttons .account-button{
+.cart-button, .account-button{
     width: 60px;
     height: 60px;
+    margin-left: 20px; 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-left: 20px; 
-    background-color: transparent;
     border-radius: 50%;
     border: none;
     cursor: pointer;
 }
-
 .account-button {
     background-image: url("../img/icono/account-manager_red.png");
-
 }
 .cart-button {
     background-image: url("../img/icono/shopping-cart-white_red.png");
 }
-
 .account-button:hover, .cart-button:hover {
     transform: scale(1.2);
 }
@@ -116,7 +132,9 @@ header div p {
     font-size: 1.8rem;
 
 }
-
+.modifier-list li{
+    margin-right: 16px;
+}
 .modifier-list li a:hover {
     transform: scaleY(1.4);
     font-weight: 600;
