@@ -29,6 +29,7 @@ main {
 }
 
 main h1 {
+    color: var(--secondary-color);
     text-align: center;
     font-size: 4rem;
     letter-spacing: 0.5rem;
@@ -41,7 +42,7 @@ main h1 {
 .fixed-menu {
     position: fixed;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     bottom: 0;
     width: 100%;
@@ -49,7 +50,6 @@ main h1 {
     background-color: var(--primary-color);
     z-index: 10;
     display: none;
-
 }
 .fixed-menu div img {
     width: 60px;
@@ -582,6 +582,7 @@ main .ubicacion-container {
     margin-bottom: 50px;
 }
 main .ubicacion-container h2 {
+    color: var(--secondary-color);
     font-size: 3.8rem;
     letter-spacing: 0.5rem;
     margin-bottom: 20px;
@@ -597,7 +598,7 @@ main .sobre-nosotros {
     height: 100%;
     width: 70%;
     height: auto;
-    margin: 30px 12.5%;
+    margin: 0 auto;
     background-color: #5D2510;
     border: 3px solid var(--secondary-color);
     box-shadow: 5px 5px 10px var(--secondary-color);
@@ -801,9 +802,13 @@ th:last-child{
 
 /* ESTILOS DE TABLET */
 @media screen and (max-width: 600px){
+    main h1 {
+        font-size: 3rem;
+    }
     /* INDEX */
     .fixed-menu {
         display: flex;
+
     }
     .header-logo{
         flex-direction: column;
@@ -920,10 +925,6 @@ th:last-child{
     }
 
     /* PRODUCTOS */
-    .fixed-menu {
-    justify-content: center;
-    bottom: 0;
-    }
     main .categories-container ul li{
         padding: 5px;
         width: auto;
@@ -968,41 +969,53 @@ th:last-child{
     .page-buttons {
         display: none;
     }
+
+    /* CONTACTO */
+    main .contacto-container {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        margin:  auto;
+    }
+    /* dirección */
+    .contacto-container--text, .contacto-container--tel{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contacto-container--text h2, .contacto-container--tel h2{
+        font-size: 2.2rem;
+    }
+    
+    main .contacto-container  p,  .contacto-container--tel ul a {
+        color: var(--secondary-color);
+        font-size: 1.8rem;
+    }
+    main .ubicacion-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    main .ubicacion-container h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 20px;
+
+    }
+    .ubicacion-container iframe{
+        width: 90%;
+        height: 50vh;
+    }
 }
 
 
 
 /* 
-main .products-container{
-    width: 90%;
-    background-color: var(--backg-green);
-    border-radius: 20px;
-    display: grid;
-    justify-content: center;
-    margin: 0 auto;
-    grid-template-rows: 90% 10% ;
-    box-shadow: 6px 6px 20px var(--secondary-color);
-    margin-bottom: 100px;
-}
 
-main .products-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-main .product-main {
-    width: 220px;
-    height: 300px;
-    margin: 10px 22px;
-    padding: 2px;
-    border-radius: 20px;
-    text-align: center;
-    border: 3px solid var(--primary-color);
-    background-color: #4e7748;
 
-    display: flex;
-    flex-direction: column;
 
-}
- */
+
+*/
