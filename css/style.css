@@ -72,7 +72,7 @@ main h1 {
 
 .header-logo-container a img {
     width: 150px;
-    height: 75%;
+    
 }
 .header-logo-container a p {
     font-size: 5rem;
@@ -699,16 +699,31 @@ main .carrito table tr .cart-info img {
     margin-right: 10px;
     
 }
+main .carrito table tr .cart-info div h3{
+    font-size: 2.5rem;
+    color: rgb(30, 27, 27);
+}
 main .carrito table tr .cart-info div p{
-    font-size: 3rem;
+    font-size: 2rem;
+}
+main .carrito table tr td .cart-info div p{
+    font-weight: 600;
+    font-size: 2.2rem;
 }
 
 main .carrito table tr td {
-    padding: 10px 20px;
-    font-size: 3rem;
+    padding: 10px;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+main .carrito table tr td:nth-child(3) {
+    font-weight: 600;
+    color: rgb(30, 27, 27);
 }
 main .carrito table tr td input {
     width: 40px;
+    font-size: 1.5rem;
     height: 30px;
     padding: 5px;
 }
@@ -800,7 +815,7 @@ th:last-child{
 
 
 /* ESTILOS DE TABLET */
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1000px){
     main h1 {
         font-size: 3rem;
     }
@@ -814,7 +829,7 @@ th:last-child{
         text-align: center;
     }
     .header-logo-container a img {
-        max-width: 150px;
+        width: 130px;
     }
     .header-logo-container a p{
         font-size: 3rem;
@@ -832,7 +847,7 @@ th:last-child{
         width: 60px;
     }
     main .categories-container ul li{
-        padding: 5px;
+        padding: 15px;;
         width: auto;
         height: auto;
     }
@@ -846,7 +861,7 @@ th:last-child{
     }   
 }
 /* ESTILOS DE MOBILE */
-    @media screen and (max-width: 380px){
+    @media screen and (max-width: 400px){
     /* INDEX */
     .fixed-menu {
         display: flex;
@@ -1035,12 +1050,67 @@ th:last-child{
         display: none;
     }
 
+
+    /* CARRITO */
+    main .carrito {
+        margin: 0 auto;
+        width: 100%;
+
+    }
+    main .carrito .total-price {
+        width: 100vh;
+
+    }
+    main .carrito table tr {
+        margin: 0 auto;
+    }
+
+    main .carrito table tr th {
+        font-size: 2rem;
+    }
+    main .carrito table tr td a {
+        font-size: 1.4rem;
+
+    }
+    main .carrito table tr td {
+        font-size: 2rem;
+        padding: 0;
+    }
+    main .carrito table tr .cart-info div h3{
+        font-size: 2rem;
+
+    }
+    main .carrito table tr .cart-info div p{
+        font-size: 2rem;
+    }
+    main .carrito table tr td .cart-info div p{
+        font-size: 2.2rem;
+    }
+    
+    main .carrito table tr td input {
+        width: 40px;
+        font-size: 1.5rem;
+        height: 30px;
+        padding: 5px;
+    }
+    main .carrito table tr td a {
+        display: inline-block;
+        color: #951c1c;
+        font-size: 1.6rem;
+        padding-top: 5px;
+    }
+    
+    main .carrito .total-price {
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        border-top: 3px solid var(--primary-color);
+    }
 }
 
 
 
 /* 
-
 
 
 
