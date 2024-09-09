@@ -25,7 +25,7 @@ li {
     list-style: none;
 }
 main {
-    margin-top: 50px;
+    margin: 50px auto;
 }
 
 main h1 {
@@ -47,7 +47,7 @@ main h1 {
     width: 100%;
     height: 8vh;
     background-color: var(--primary-color);
-
+    z-index: 10;
     display: none;
 
 }
@@ -402,12 +402,14 @@ footer .footer-container-redes ul li img {
 main .categories-container {
     height: 80px;
     margin-bottom: 50px;
+
 }
 
 main .categories-container ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 main .categories-container ul li{
@@ -437,6 +439,12 @@ main .products-container{
     box-shadow: 6px 6px 20px var(--secondary-color);
     margin-bottom: 100px;
 }
+main .products-list {
+    grid-row: 1;
+}
+main .page-buttons{
+    grid-row: 2;
+}
 
 main .products-list {
     display: flex;
@@ -465,13 +473,13 @@ main .products-container .product-main div img {
     border-radius: 20px 20px 0 0;
 }
 
-main .products-container .products-list .product-main div {
+main .products-container .products-list .product-main {
     position: relative;
 }
 
 
 /* estilos de botones "💚" */
-main .products-container .products-list .product-main div .heart-button {
+main .product-main .heart-button {
     position: absolute;
     margin: 10px;
     top: 0;
@@ -503,46 +511,6 @@ main .products-container .products-list .product-main span{
     padding-right: 5px;
     color: var(--backg-white)
 } 
-
-/* main .products-container .product-container .product-main {
-    width: 220px;
-    display: inline-block;
-    height: 300px;
-    margin: 10px 22px;
-    border-radius: 20px;
-    text-align: center;
-    padding: 2px;
-    border: 3px solid var(--primary-color);
-    background-color: #4e7748;
-
-}
-main .products-container .product-container .product-main div {
-    position: relative;
-}
-main .products-container .product-container .product-main div img {
-    width: 100%;
-    height: 60%;
-    border-radius: 20px 20px 0 0;
-}
-
-main .products-container .product-container .product-main div a {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-
-main .products-container .product-container .product-main h3{
-    font-size: 2.2rem;
-    padding-top: 5px;
-    color: var(--backg-white)
-}
-main .products-container .product-container .product-main p{
-    font-size: 2.6rem;
-    padding-top: 5px;
-    color: var(--backg-white)
-} */
-
 
 /* estilos de botones de productos */
 .page-buttons ul {
@@ -826,6 +794,8 @@ th:last-child{
 
 .fixed-wsp-button a img{
     background-color: none;
+
+    
 }
 
 
@@ -857,6 +827,19 @@ th:last-child{
     .fixed-button a img {
         width: 60px;
     }
+    main .categories-container ul li{
+        padding: 5px;
+        width: auto;
+        height: auto;
+    }
+    main .categories-container ul {
+        display: flex;
+        gap: 5px;
+        padding: 5px;
+    }
+    main .categories-container ul li a{
+        font-size: 1.4rem;
+    }   
 }
 /* ESTILOS DE MOBILE */
     @media screen and (max-width: 380px){
@@ -901,6 +884,7 @@ th:last-child{
     .fixed-button a img {
         width: 50px;
     }
+    /* FOOTER */
     .footer {
         padding-bottom: 100px;
     }
@@ -927,5 +911,98 @@ th:last-child{
         justify-content: center;
         align-items: center;
     }
+    /* Boton carrito */
+    .fixed-button {
+        position: fixed;
+        right: 5px;
+        bottom: 100px;
+    
+    }
+
+    /* PRODUCTOS */
+    .fixed-menu {
+    justify-content: center;
+    bottom: 0;
+    }
+    main .categories-container ul li{
+        padding: 5px;
+        width: auto;
+        height: auto;
+    }
+    main .categories-container ul {
+        display: flex;
+        gap: 5px;
+        padding: 5px;
+    }
+    main .categories-container ul li a{
+        font-size: 1.4rem;
+    }   
+    main .product-main {
+        width: 300px;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+    }
+    main .products-container .product-main div img {
+        border-radius: 20px 20px 0 0;
+        width: 150px;
+        height: auto;
+    }
+    .product-main-texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    main .product-main .heart-button {
+        position: absolute;
+        margin: 10px;
+        top: 100px;
+        right: 0;
+    }
+    main .products-container{
+        justify-content: center;
+        margin: 0 auto;
+        grid-template-rows: 90% 10% ;
+        flex-wrap: wrap;
+    }
+    .page-buttons {
+        display: none;
+    }
+}
+
+
+
+/* 
+main .products-container{
+    width: 90%;
+    background-color: var(--backg-green);
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    grid-template-rows: 90% 10% ;
+    box-shadow: 6px 6px 20px var(--secondary-color);
+    margin-bottom: 100px;
+}
+
+main .products-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+main .product-main {
+    width: 220px;
+    height: 300px;
+    margin: 10px 22px;
+    padding: 2px;
+    border-radius: 20px;
+    text-align: center;
+    border: 3px solid var(--primary-color);
+    background-color: #4e7748;
+
+    display: flex;
+    flex-direction: column;
 
 }
+ */
