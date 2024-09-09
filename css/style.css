@@ -46,7 +46,7 @@ main h1 {
     bottom: 0;
     width: 100%;
     height: 8vh;
-    background-color: #83d9b1;
+    background-color: var(--primary-color);
 
     display: none;
 
@@ -229,7 +229,6 @@ main h1 {
     grid-template-rows: 15% 75% 15%;
     align-items: center;
     justify-content: center;
-
 }
 .section-2-main-ul-container {
     grid-row: 1 / 2;
@@ -360,6 +359,7 @@ footer h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 .footer-isologo a {
     font-size: 2.5rem;
@@ -372,7 +372,6 @@ footer h3 {
     grid-template-columns: repeat(3, 1fr);
     align-content: center;
     justify-content: center;
-    
 }
 .footer-container-contacto,
 .footer-container-redes{
@@ -860,7 +859,7 @@ th:last-child{
     }
 }
 /* ESTILOS DE MOBILE */
-    @media screen and (max-width: 320px){
+    @media screen and (max-width: 380px){
     /* INDEX */
     .fixed-menu {
         display: flex;
@@ -874,20 +873,21 @@ th:last-child{
     .section-1-main {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
     }
     .section-1-bottom a{
         font-size: 1.5rem;
+        text-align: center;
     }
     .section-2-main-ul-container ul {
         width: 60%;
         height: 55px;
-
+        justify-content: center;
+        margin: 0 auto;
     }
     .section-2-main-ul-container ul li{
-        padding: 3px;
         font-size: 1.4rem;
-        margin: 0 auto;
+        padding: 3px;
     }
 
     .card-main{ 
@@ -900,6 +900,32 @@ th:last-child{
     }
     .fixed-button a img {
         width: 50px;
+    }
+    .footer {
+        padding-bottom: 100px;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .footer-container-isologo {
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-container-contacto {
+        grid-row: 2;
+    }
+    .footer-container-redes {
+        grid-row: 3;
+        justify-content: flex-start;
+        padding-bottom: 100px;
+    }
+    .footer-isologo a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }
