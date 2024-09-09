@@ -593,7 +593,6 @@ main .ubicacion-container h2 {
 /* -----------------------------ESTILOS DE SOBRE NOSOTROS --------------------------------*/
 /* -----------------------------ESTILOS DE SOBRE NOSOTROS --------------------------------*/
 
-
 main .sobre-nosotros {
     height: 100%;
     width: 70%;
@@ -1009,6 +1008,33 @@ th:last-child{
         width: 90%;
         height: 50vh;
     }
+
+
+    main .sobre-nosotros {
+        width: 90%;
+        height: auto;
+    
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 80% 20%;
+    }
+    main .sobre-nosotros-top-left {
+        grid-row: 1 / 2;
+        grid-column: 1 / 5;
+        font-size: 1.4rem;
+        margin: 40px 18px;
+    }
+    main .sobre-nosotros-top-right{
+        display: none;
+    }
+    .img-sobre-nosotros {
+        grid-row: 2 / 3;
+        grid-column: 1 / 5;
+    }
+    .img-5, .img-6 {
+        display: none;
+    }
+
 }
 
 
