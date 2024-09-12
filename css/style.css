@@ -863,7 +863,7 @@ th:last-child{
 
 /*-------------- ESTILOS DE MOBILE ------------------*/
 /*-------------- ESTILOS DE MOBILE ------------------*/
-    @media screen and (max-width: 400px){
+@media screen and (max-width: 600px){
     /* INDEX */
     .fixed-menu {
         display: flex;
